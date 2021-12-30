@@ -1,6 +1,4 @@
 var template = {
-    username: "Do ustalenia xd",
-    avatar_url: null,
     embeds: [
         {
             title: "New comming post",
@@ -8,6 +6,7 @@ var template = {
             fields: [],
     }]
 }
+
 
 window.addEventListener("load", function () {
     let category = this.document.getElementById("category")
