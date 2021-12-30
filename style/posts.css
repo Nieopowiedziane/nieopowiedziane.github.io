@@ -1,0 +1,45 @@
+.story-links {
+    font-size: var(--story-links-size);
+    margin: unset;
+    margin-top: 10px;
+}
+/* hover dla linków zdefiniowany w main.css*/
+
+#story-title, #title-href{
+    text-indent: 15px;
+    color: #00d9ff;
+    font-size: 27px;
+    font-style: italic;
+}
+
+.story-content {
+    font-size: 16px;
+    margin: 0.5%;
+    margin-top: 2%;
+    font-family: Arial;
+    text-indent: 15px;
+}
+
+
+/* Kategorie postów */
+.story-category::after{
+    opacity: 73%;
+    font-style: italic;
+    color: var(--category-color);
+    margin-left: 10px;
+    content: "Kategoria: "attr(data-category);
+}
+
+.story-category:hover{
+    opacity: 100%;
+}
+
+/* Przy linku */
+.near-link::after{
+    font-size: 15px;
+}
+
+/* Przy tytule */
+.near-title::after{
+    font-size: 17px;
+}

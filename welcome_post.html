@@ -1,0 +1,46 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="style/container.css" rel="stylesheet" type="text/css" />
+    <link href="style/main.css" rel="stylesheet" type="text/css" />
+    <script type=text/javascript src="main.js"></script>
+    <title>Strona powitalna | Historie nigdy nieopowiedziane</title>
+
+</head>
+
+<body>
+    <dl class='data-out'>
+        <dt id="story-title">&nbsp; Strona wystartowała!</dt>
+        <dd id="story-content">
+            <p>Od teraz każdy użytkownik może anonimowo opublikować swoją nieopowiedzianą historię.</p>
+            <ul id="lista" style="list-style:decimal;">Wysłanie takiego wpisu to nic ciężkiego:
+                <li class="el">Wejdź na stronę podaną w biogramie,</li>
+                <li class="el">Podaj tytuł swojego wpisu,</li>
+                <li class="el">Wybierz odpowiednią kategorię,</li>
+                <li class="el">Wpisz treść swojej historii,</li>
+                <li class="el">Naciśnij przycisk <em>"Wyślij"</em>,</li>
+                <p style="margin-top: 4px;">i gotowe. Od tej chwili możesz znaleźć swój wpis w zakładce <em>"Przysłane
+                        historie"</em>.</p>
+            </ul>
+
+            <p>Masz jakiś pomysł na ulepszenie tej strony? Pisz śmiało! Zobaczymy co da się zrobić😉.</p>
+            <p>W przyszłości posty będą opublikowane na tym profilu, tylko niech uzbiera się ich trochę więcej😁.</p>
+            <p>Proszę o udostępnianie. Dajmy rozgłos tej stronce!</p>
+        </dd>
+    </dl>
+
+    <button id='go_back' class="data-in buttons">Powrót</button>
+</body>
+<script>
+    function change_padding() {
+        document.getElementById('lista').style.marginLeft = "15px";
+        elements = document.getElementsByClassName('el')
+        for (var a = 0; a < elements.length; a++) {
+            elements[a].style.marginLeft = "20px"
+        }
+        console.log("Done it!");
+    }
+    window.onload = change_padding()
+</script>
+{% endblock %}

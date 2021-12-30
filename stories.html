@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="flavicon.ico">    
+    <link href="style/container.css" rel="stylesheet" type="text/css" />
+    <link href="style/posts.css" rel="stylesheet" type="text/css" />
+    <link href="style/main.css" rel="stylesheet" type="text/css" />
+
+    <script type=text/javascript src="main.js"></script>
+    <title> | Historie nigdy nieopowiedziane</title>
+
+    <a href="/">
+        <h1 id="nagłówek">Historie nigdy nieopowiedziane</h1>
+    </a>
+    <svg>
+        <line x1="0" y1="0" x2="100%" y2="0" style="stroke:white;stroke-width:2" />
+    </svg>
+    <div id="container">
+        <div id="menu-bar" onclick="change_menu()">
+            <p class="menu-title" id="menu-title">Menu</p>
+            <div class="menu-title" id="menu-button">
+                <div class="menu-button"></div>
+                <div class="menu-button"></div>
+                <div class="menu-button"></div>
+            </div>
+        </div>
+        <ol id="menu-elements">
+            <li><a id="main" href="/">Strona główna</a></li>
+            <li><a id="about" href="/about.html">O projekcie</a></li>
+            <li><a id="last_post" href="^link^">Ostatnio udostępniony wpis</a></li>
+            <li><a id="stories" href="/stories.html">Przysłane historie</a></li>
+            <li><a id="instagram" href="https://www.instagram.com/historie.nigdy.nieopowiedziane/">Instagram</a></li>
+            <li><a id="source" href="https://github.com/Barpotroszek/historie_nigdy_nieopowiedziane">Kod źródłowy</a>
+            </li>
+        </ol>
+    </div>
+    <svg>
+        <line x1="0" y1="0" x2="100%" y2="0" style="stroke:white;stroke-width:2" />
+    </svg>
+</head>
+
+<body>
+    <dl class='data-out'>
+        <dt id="story-title"></dt>
+        <dd id="content" class="">
+        </dd>
+    </dl>
+    <button id='go_back' class="data-in buttons">Powrót</button>
+</body>
+
+</html>
