@@ -206,3 +206,17 @@ window.addEventListener("load", () => {
     let url_obj = slice_url();
     stuff_with_json_file(url_obj)
 })
+
+function to_share(){
+    document.getElementsByTagName('svg')[0].remove();
+    document.getElementById('container').remove();
+
+    document.getElementById("nagłówek").style.fontSize = "50px";
+    document.getElementById("story-title").style.fontSize = "37px";
+    document.getElementById('content').style.fontSize = "27px";
+    console.log(document.getElementsByClassName("near-title")[0])
+    console.log(document.styleSheets[2] )
+    document.styleSheets[2].insertRule(".near-title::after {font-size: 22px;}", 0)
+    document.styleSheets[2].insertRule("#naglowek {margin: 2px;}", 0)
+    document.getElementsByTagName("button")[0].remove();
+}
