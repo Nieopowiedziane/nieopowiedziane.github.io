@@ -7,6 +7,7 @@ var template = {
     }]
 }
 
+const webhook_href = "https://discord.com/api/webhooks/928183558470770749/Y70PWDo6POT1kFtlO00Oi10gVGtasExp5KkXZHc0PFr1xXXC2mz-Z4WWfiYCJk2f5cjs" 
 
 window.addEventListener("load", function () {
     let category = this.document.getElementById("category")
@@ -68,6 +69,7 @@ window.addEventListener("load", function () {
 
         let client = new XMLHttpRequest();
         client.addEventListener("load", function(){
+            console.log("href: " + webhook_href)
             console.log("type: "+ this.responseType)
             console.log("code: "+ this.status)
             console.log("txt: "+ this.responseText)
@@ -79,7 +81,7 @@ window.addEventListener("load", function () {
                 alert("Możliwe, że coś poszło nie tak :<")
             }
         })
-        client.open("POST", "https://discord.com/api/webhooks/925091793178091581/s3FMQMjV9c8VbQtjCT7LMveqv3vU28h_6Z4r6zgtRVvutVRLdec8I7E-jkF7lIKNLDrr")
+        client.open("POST", webhook_href)
         client.setRequestHeader("Content-type", "application/json");
         client.send(data)
     }
