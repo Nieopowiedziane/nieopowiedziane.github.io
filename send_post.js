@@ -1,13 +1,4 @@
-var template = {
-    embeds: [
-        {
-            title: "New comming post",
-            color: 0x4287f5,
-            fields: [],
-    }]
-}
-
-const webhook_href = "https://discord.com/api/webhooks/928183558470770749/Y70PWDo6POT1kFtlO00Oi10gVGtasExp5KkXZHc0PFr1xXXC2mz-Z4WWfiYCJk2f5cjs" 
+const webhook_href = "https://formspree.io/f/mpzbwvrd" 
 
 window.addEventListener("load", function () {
     let category = this.document.getElementById("category")
@@ -39,32 +30,21 @@ window.addEventListener("load", function () {
         let type = getElemByName("story-category").value;
         let content = getElemByName("story-content").value;
         let data = {
-            "title": title,
-            "type": type,
-            "content": content,
+            "Tytuł": title,
+            "Kategoria": type,
+            "Treść": content,
         }
-        
-        let fields = {
-            "title": "Tytuł",
-            "type" : "Kategoria",
-            "content" : "Treść"
-        }
+    
         // Uzupełnianie danych według podanego wyżej template'u
-        let msg = new Object(template);
         for (let a in data) {
             
             if (data[a] == "") { //Sprawdzanie czy wszystkie pola są zapełnione
-                alert("Nie zapełniłeś pola: " + fields[a]);
+                alert("Nie zapełniłeś pola: " + a);
                 return;
             }
-            let obj = {
-                name: a,
-                value: data[a],
-                inline: false
-            };
-            msg.embeds[0].fields.push(obj);
         }
-        data = JSON.stringify(msg)
+        
+        data = JSON.stringify(data)
         console.log("Data to send: \n" + data)
 
         let client = new XMLHttpRequest();
@@ -73,7 +53,7 @@ window.addEventListener("load", function () {
             console.log("type: "+ this.responseType)
             console.log("code: "+ this.status)
             console.log("txt: "+ this.responseText)
-            if(this.status == 204){
+            if(this.status == 200){
                 alert("Wiadomość została wysłana :D")
                 window.location.pathname = "post.html"
             }
