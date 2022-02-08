@@ -161,6 +161,7 @@ function stuff_with_json_file(window_url) {
                     // log("have all")
                     let id = window_url.search.get("id")
                     let post = posts_data["posts"][date][id]
+                    if(!post) return notFound();
                     let text = post["content"].replaceAll("\n", "</p><p>")
 
                     let category = document.createElement("a")
