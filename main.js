@@ -60,7 +60,7 @@ function change_title(new_title) {
 
 function create_stories_list(key, data) {
   const dt = document.createElement("dt");
-  dt.innerHTML = key;
+  dt.innerHTML = key
   dt.className = "story-date";
   const dd = document.createElement("dd");
   const ul = document.createElement("ul");
@@ -72,6 +72,7 @@ function create_stories_list(key, data) {
     a.classList.add("near-link", "story-category");
     a.dataset["category"] = categories[story["category"]];
     const li = document.createElement("li");
+		li.classList.add("story-link")
     li.appendChild(a);
     ul.appendChild(li);
   }
@@ -121,6 +122,7 @@ function stuff_with_json_file(window_url) {
     if (window_url.path.startsWith("/stories")) {
       // log("stories");
       let value = 0; // co jest podane? (id/date)
+			//TODO: zmienić to na tablice bitowe
       if (window_url.search.has("date")) {
         value += 1;
       }
@@ -128,6 +130,7 @@ function stuff_with_json_file(window_url) {
 
       switch (value) {
         case 0: // nothing defined
+          case 1: //
           // log("have nothing")
           change_title("Przysłane wpisy");
           for (let key in posts_data["posts"]) {

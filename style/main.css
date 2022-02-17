@@ -49,12 +49,6 @@ p {
     margin-top: 2px;
 }
 
-
-#title-href:hover{
-   color: #006680;
-}
-
-
 /* pola do wpisywania i przyciski */
 .data-in:active, .data-in:hover {
     border-color: #006680;

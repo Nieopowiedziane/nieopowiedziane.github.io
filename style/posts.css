@@ -1,23 +1,46 @@
-.story-links {
+.story-link {
     font-size: var(--story-links-size);
-    margin: unset;
-    margin-top: 10px;
 }
 /* hover dla linków zdefiniowany w main.css*/
 
-#story-title, #title-href{
-    text-indent: 15px;
-    color: #00d9ff;
-    font-size: 27px;
+/* Kontener na date-div */
+#div-with-dates{
+    display: flex;
+    margin-top: 10px;
+    flex-flow: row-reverse wrap-reverse;
+}
+
+/* Div z linkami do postów */
+.date-div {
+    position: relative;
+    /* border: 2px solid grey; */
+    flex-grow: 1;
+    min-width: fit-content;
+    margin: 10px 0;
+    flex-basis: 50%;
+}
+
+/* Tytuł diva, data */
+.story-date{
+    color: #2ee4d5;
+    font-size: 23px;
+    padding: 0.2em;
     font-style: italic;
 }
 
-.story-content {
-    font-size: 16px;
-    margin: 0.5%;
-    margin-top: 15px;
-    font-family: Arial;
-    text-indent: 15px;
+/* Lista */ 
+.date-div dd {
+    margin-left: 5px;
+}
+
+/* Lista linków do postu */
+.date-div dd ul {
+    display: flex;
+    flex-direction: column-reverse;
+    border-left: 2px solid #2ee4d5;
+    margin:0 2em;
+    padding-left: 1em;
+    list-style: none;
 }
 
 
@@ -34,12 +57,27 @@
     opacity: 100%;
 }
 
-/* Przy linku */
+/* Kategoria przy linku */
 .near-link::after{
     font-size: 15px;
 }
 
-/* Przy tytule */
+/* Kategoria przy tytule */
 .near-title::after{
     font-size: 17px;
+}
+
+#story-title, #title-href{
+    text-indent: 15px;
+    color: #00d9ff;
+    font-size: 27px;
+    font-style: italic;
+}
+
+.story-content {
+    font-size: 16px;
+    margin: 0.5%;
+    margin-top: 15px;
+    font-family: Arial;
+    text-indent: 15px;
 }
