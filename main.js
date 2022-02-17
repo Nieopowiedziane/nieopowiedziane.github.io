@@ -130,7 +130,7 @@ function stuff_with_json_file(window_url) {
 
       switch (value) {
         case 0: // nothing defined
-          case 1: //
+          case 1: //TODO: Gdy podana data...
           // log("have nothing")
           change_title("Przysłane wpisy");
           for (let key in posts_data["posts"]) {
