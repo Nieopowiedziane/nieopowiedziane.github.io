@@ -1,83 +1,97 @@
-.story-link {
-    font-size: var(--story-links-size);
-}
-/* hover dla linków zdefiniowany w main.css*/
-
 /* Kontener na date-div */
-#div-with-dates{
-    display: flex;
-    margin-top: 10px;
-    flex-flow: row-reverse wrap-reverse;
+#div-with-dates {
+  display: flex;
+  margin-top: 10px;
+  flex-flow: row-reverse wrap-reverse;
 }
 
 /* Div z linkami do postów */
 .date-div {
-    position: relative;
-    /* border: 2px solid grey; */
-    flex-grow: 1;
-    min-width: fit-content;
-    margin: 10px 0;
-    flex-basis: 50%;
+  position: relative;
+  /* border: 2px solid grey; */
+  flex-grow: 1;
+  min-width: fit-content;
+  margin: 10px 0;
+  flex-basis: 50%;
 }
 
 /* Tytuł diva, data */
-.story-date{
-    color: #2ee4d5;
-    font-size: 23px;
-    padding: 0.2em;
-    font-style: italic;
+.story-date {
+  color: #2ee4d5;
+  font-size: 23px;
+  padding: 0.2em;
+  font-style: italic;
 }
 
-/* Lista */ 
+/* Lista */
 .date-div dd {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 /* Lista linków do postu */
 .date-div dd ul {
-    display: flex;
-    flex-direction: column-reverse;
-    border-left: 2px solid #2ee4d5;
-    margin:0 2em;
-    padding-left: 1em;
-    list-style: none;
+  display: flex;
+  flex-direction: column-reverse;
+  border-left: 2px solid #2ee4d5;
+  margin: 0 1em;
+  padding-left: 0.5em;
+  list-style: none;
 }
 
+.story-link {
+    font-size: var(--story-links-size);
+    position: relative;
+    padding-left: 15px;
+  }
+  /* hover dla linków zdefiniowany w main.css*/
+
+li.story-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  height: 5px;
+  width: 5px;
+  border: 1px solid #ffffff;
+  border-width: 2px 2px 0 0;
+  transform: rotate(45deg);
+}
 
 /* Kategorie postów */
-.story-category::after{
-    opacity: 73%;
-    font-style: italic;
-    color: var(--category-color);
-    margin-left: 10px;
-    content: "Kategoria: "attr(data-category);
+.story-category::after {
+  opacity: 73%;
+  font-style: italic;
+  color: var(--category-color);
+  margin-left: 10px;
+  content: "Kategoria: " attr(data-category);
 }
 
-.story-category:hover{
-    opacity: 100%;
+.story-category:hover {
+  opacity: 100%;
 }
 
 /* Kategoria przy linku */
-.near-link::after{
-    font-size: 15px;
+.near-link::after {
+  font-size: 15px;
 }
 
 /* Kategoria przy tytule */
-.near-title::after{
-    font-size: 17px;
+.near-title::after {
+  font-size: 17px;
 }
 
-#story-title, #title-href{
-    text-indent: 15px;
-    color: #00d9ff;
-    font-size: 27px;
-    font-style: italic;
+#story-title,
+#title-href {
+  text-indent: 15px;
+  color: #00d9ff;
+  font-size: 27px;
+  font-style: italic;
 }
 
 .story-content {
-    font-size: 16px;
-    margin: 0.5%;
-    margin-top: 15px;
-    font-family: Arial;
-    text-indent: 15px;
+  font-size: 16px;
+  margin: 0.5%;
+  margin-top: 15px;
+  font-family: Arial;
+  text-indent: 15px;
 }
